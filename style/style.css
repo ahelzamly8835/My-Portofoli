@@ -1,0 +1,122 @@
+/* استيراد Tailwind */
+@import "tailwindcss";
+
+/* ===============================
+   Reset بسيط يحسن الـ layout
+================================ */
+
+*{
+  letter-spacing: 2px;
+  line-height: 1.1;
+  box-sizing: border-box; /* مهم عشان يمنع مشاكل width */
+  margin: 0;
+  padding: 0;
+}
+
+/* ===============================
+   Fonts
+================================ */
+
+/* الخط الافتراضي */
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+/* العناوين */
+.font-antonio{
+  font-family: 'Antonio', sans-serif;
+}
+
+/* النصوص */
+.font-poppins{
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Job title */
+.Job-name{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* ===============================
+   Hero animation
+================================ */
+
+.fadeInUpBlur{
+
+  /* العنصر يبدأ مخفي */
+  opacity:0;
+
+  /* blur بسيط */
+  filter:blur(4px);
+
+  /* يبدأ من تحت */
+  transform:translateY(50px);
+
+  /* تشغيل الانيميشن */
+  animation:fadeInUpBlurAnim 1s forwards;
+
+}
+
+/* Keyframes للانيميشن */
+
+@keyframes fadeInUpBlurAnim{
+
+  to{
+
+    opacity:1;           /* يظهر */
+    filter:blur(0);      /* إزالة البلور */
+    transform:translateY(0); /* يرجع مكانه */
+
+  }
+
+}
+
+
+/* ===============================
+   Scroll Animation
+================================ */
+
+.section-animate{
+
+  opacity:0;
+  filter:blur(12px);
+  transform:translateY(30px);
+  transition:all .7s ease;
+
+}
+
+/* لما العنصر يظهر */
+
+.section-animate.show{
+
+  opacity:1;
+  filter:blur(0);
+  transform:translateY(0);
+
+}
+
+
+/* ===============================
+   Project Cards
+================================ */
+
+.product-card img{
+
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+}
+
+
+/* ===============================
+   Image hover animation
+================================ */
+
+.product-card:hover img{
+
+  transform:scale(1.05);
+  transition:.5s;
+
+}
